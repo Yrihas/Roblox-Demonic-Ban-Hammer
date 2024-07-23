@@ -1,0 +1,328 @@
+--Created by LuckyPlayerScripter Discord: FenixYT#0390
+--ROBLOX's Ban Hammer Is back!
+plr = game.Players.LocalPlayer
+char = plr.Character
+mouse = plr:GetMouse()
+whitecolor = Color3.new(1,1,1)
+epicmode = false
+normal = true
+for i,v in pairs(char:GetChildren()) do
+   if v.ClassName == "Shirt" or v.ClassName == "Pants" or v.ClassName == "ShirtGraphic" then
+      v:Destroy()
+     end
+end
+local shirt = Instance.new("Shirt",char)
+shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=607785311"
+local pants = Instance.new("Pants",char)
+pants.PantsTemplate = "http://www.roblox.com/asset/?id=348211416"
+local bdycolors = char["Body Colors"]
+bdycolors.HeadColor3 = whitecolor
+bdycolors.LeftArmColor3 = whitecolor
+bdycolors.LeftLegColor3 = whitecolor
+bdycolors.RightArmColor3 = whitecolor
+bdycolors.RightLegColor3 = whitecolor
+bdycolors.TorsoColor3 = whitecolor
+
+-- Face
+char.Head.face.Texture = "http://www.roblox.com/asset/?id=26053664"
+z = Instance.new("Sound", char)
+z.SoundId = "rbxassetid://837104892"--837104892
+z.Looped = true
+z.Pitch = 1
+z.Volume = 10
+wait(.001)
+z:Play()
+--------------------------------
+plr1 = Instance.new("Part",char)
+plr1.FormFactor = Enum.FormFactor.Custom
+plr1.Size = Vector3.new(1.8,0.8,1.8)
+plr1.CanCollide = false
+plr1.Locked = true
+plr1.BottomSurface = Enum.SurfaceType.Smooth
+plr1.TopSurface = Enum.SurfaceType.Smooth
+SMesh = Instance.new("SpecialMesh", p1)
+SMesh.MeshId = "http://www.roblox.com/asset/?id=71483350"
+SMesh.MeshType = Enum.MeshType.FileMesh
+SMesh.Name = "Mesh"
+SMesh.TextureId = "http://www.roblox.com/asset/?id=607698990"
+w1 = Instance.new("Weld", hed)
+w1.Part0 = hed
+w1.C0 = CFrame.new(0,0.76,0.2)*CFrame.Angles(0.3,0,0)
+w1.Part1 = p1
+w1.C1 = CFrame.new(0, 0, 0)
+-----------
+CV="Maroon"
+	Player = game.Players.LocalPlayer
+	Character = Player.Character
+	local txt = Instance.new("BillboardGui", Character)
+	txt.Adornee = Character .Head
+	txt.Name = "_status"
+	txt.Size = UDim2.new(2, 0, 1.2, 0)
+	txt.StudsOffset = Vector3.new(-9, 8, 0)
+	local text = Instance.new("TextLabel", txt)
+	text.Size = UDim2.new(10, 0, 7, 0)
+	text.FontSize = "Size24"
+	text.TextScaled = true
+	text.TextTransparency = 0
+	text.BackgroundTransparency = 1 
+	text.TextTransparency = 0
+	text.TextStrokeTransparency = 0
+	text.Font = "Arcade"
+	text.TextStrokeColor3 = Color3.new(255,0,0)
+
+	v=Instance.new("Part")
+	v.Name = "ColorBrick"
+	v.Parent=Player.Character
+	v.FormFactor="Symmetric"
+	v.Anchored=true
+	v.CanCollide=false
+	v.BottomSurface="Smooth"
+	v.TopSurface="Smooth"
+	v.Size=Vector3.new(10,5,3)
+	v.Transparency=1
+	v.CFrame=Character.Torso.CFrame
+	v.BrickColor=BrickColor.new(CV)
+	v.Transparency=1
+	text.TextColor3 = Color3.new(255,0,0)
+	v.Shape="Block"
+	text.Text = "ROBLOX"
+	-----------------------------------------
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+Tool0 = Instance.new("Tool")
+Part1 = Instance.new("Part")
+Sound2 = Instance.new("Sound")
+SpecialMesh3 = Instance.new("SpecialMesh")
+ParticleEmitter4 = Instance.new("ParticleEmitter")
+PointLight5 = Instance.new("PointLight")
+Script6 = Instance.new("Script")
+LocalScript7 = Instance.new("LocalScript")
+Script8 = Instance.new("Script")
+PointLight9 = Instance.new("PointLight")
+Tool0.Name = "BanHammer"
+Tool0.Parent = mas
+Tool0.Grip = CFrame.new(0, -1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Tool0.GripPos = Vector3.new(0, -1, 0)
+Part1.Name = "Handle"
+Part1.Parent = Tool0
+Part1.CFrame = CFrame.new(32.008461, 0.891610622, -25.8348217, 0.39936024, -0.916794062, -5.90707568e-05, -0.00029530219, -6.41899824e-05, -0.99999994, 0.916794002, 0.39936021, -0.000296359474)
+Part1.Orientation = Vector3.new(89.9799957, -168.729996, -102.259995)
+Part1.Position = Vector3.new(32.008461, 0.891610622, -25.8348217)
+Part1.Rotation = Vector3.new(90.0199966, 0, 66.4599991)
+Part1.Velocity = Vector3.new(0.00131022232, -0.00751958555, 0.00376307126)
+Part1.Size = Vector3.new(1, 4.80000019, 1)
+Part1.RotVelocity = Vector3.new(-0.00235919608, 0.000430068758, 0.00397496484)
+Sound2.Name = "Boom"
+Sound2.Parent = Part1
+Sound2.SoundId = "rbxasset://sounds/Rocket shot.wav"
+Sound2.Volume = 1
+SpecialMesh3.Parent = Part1
+SpecialMesh3.MeshId = "rbxassetid://10604848"
+SpecialMesh3.TextureId = "rbxassetid://94840359"
+SpecialMesh3.MeshType = Enum.MeshType.FileMesh
+ParticleEmitter4.Parent = Part1
+ParticleEmitter4.Color = ColorSequence.new(Color3.new(1, 0, 0),Color3.new(1, 0, 0))
+ParticleEmitter4.LightInfluence = 1
+PointLight5.Parent = Part1
+PointLight5.Color = Color3.new(1, 0, 0.0156863)
+PointLight5.Range = 60
+PointLight5.Brightness = 9.9999998430675e+17
+Script6.Name = "HammerScript"
+Script6.Parent = Tool0
+table.insert(cors,sandbox(Script6,function()
+-------- OMG HAX
+
+r = game:service("RunService")
+
+
+Tool = script.Parent
+hammer = Tool.Handle
+
+local shockRing = Instance.new("Part")
+shockRing.formFactor = 2
+shockRing.Size = Vector3.new(1, 0.60, 999999)
+shockRing.Anchored = true
+shockRing.Locked = true
+shockRing.CanCollide = false
+shockRing.archivable = false
+shockRing.TopSurface = 0
+shockRing.BottomSurface = 0
+shockRing.Transparency = 1
+local decal = Instance.new("Decal")
+decal.Face = 1
+decal.Texture = "http://www.roblox.com/asset/?version=1&id=1280730"
+decal.Parent = shockRing
+
+local bottomDecal = decal:Clone()
+bottomDecal.Face = 4
+bottomDecal.Parent = shockRing
+
+
+
+function doDamage(hit)
+	local humanoid = hit.Parent:findFirstChild("Humanoid")
+	local vCharacter = Tool.Parent
+	local vPlayer = game.Players:playerFromCharacter(vCharacter)
+	local hum = vCharacter:findFirstChild("Humanoid") -- non-nil if tool held by a character
+	if humanoid~=nil and humanoid ~= hum and hum ~= nil then
+		tagHumanoid(humanoid, vPlayer)
+		humanoid:TakeDamage(humanoid.MaxHealth)
+		if humanoid.Health <= 0 then
+			local c = hit.CFrame
+			hit.CFrame = CFrame.new(hit.Position)
+			hit.CFrame = c
+		end
+		delay(1, function() untagHumanoid(humanoid) end)
+	else
+		local c = hit.CFrame	hit:BreakJoints()	hit.CFrame = CFrame.new(hit.Position)	hit.CFrame = c
+	end
+end
+
+
+function tagHumanoid(humanoid, player)
+	local creator_tag = Instance.new("ObjectValue")
+	creator_tag.Value = player
+	creator_tag.Name = "creator"
+	creator_tag.Parent = humanoid
+end
+
+function untagHumanoid(humanoid)
+	if humanoid ~= nil then
+		local tag = humanoid:findFirstChild("creator")
+		if tag ~= nil then
+			tag.Parent = nil
+		end
+	end
+end
+
+function blow(obj, pos, notme)
+	if (obj ~= notme) then
+		if (obj.className == "Part") or (obj.className == "Seat") then
+			if (not obj.Anchored) and (((pos - obj.Position) * Vector3.new(1, 0, 1)).magnitude < 96) and (pos.y <= obj.Position.y + 8) and (pos.y >= obj.Position.y - 8) then
+				delay((pos - obj.Position).magnitude / 96, function()	doDamage(obj)	obj.Velocity = ((obj.Position - pos).unit + Vector3.new(0, 0.5, 0)) * 96 + obj.Velocity	obj.RotVelocity = obj.RotVelocity + Vector3.new(obj.Position.z - pos.z, 0, pos.x - obj.Position.x).unit * 40	end)
+			end
+		elseif (obj.className == "Model") or (obj.className == "Hat") or (obj.className == "Tool") or (obj == workspace) then
+			local list = obj:GetChildren()
+			for x = 1, #list do
+				blow(list[x], pos, notme)
+			end
+		end
+	end
+end
+
+function attack()
+	damage = slash_damage
+	local anim = Instance.new("StringValue")
+	anim.Name = "toolanim"
+	anim.Value = "Slash"
+	anim.Parent = Tool
+	wait(0.2)
+
+	print("Blasting!")
+
+	local pos = hammer.CFrame * (Vector3.new(0, 1.4, 0) * hammer.Mesh.Scale)
+
+	blow(workspace, pos, Tool.Parent)
+
+	shockRing.CFrame = CFrame.new(pos)
+	for x = 1, 29 do
+		delay(x / 30, function()	shockRing.Parent = nil	shockRing.Size = Vector3.new(0, 0.4, 0) + Vector3.new(6.4, 0, 6.4) * x	shockRing.Parent = Tool	end)
+	end
+	delay(1, function() shockRing.Parent = nil end)
+end
+
+
+Tool.Enabled = true
+function onActivated()
+
+	if not Tool.Enabled then
+		return
+	end
+
+	Tool.Enabled = false
+
+	local character = Tool.Parent;
+	local humanoid = character.Humanoid
+	if humanoid == nil then
+		print("Humanoid not found")
+		return 
+	end
+
+	hammer.Boom:Play()
+	attack()
+
+	wait(0.5)
+
+	Tool.Enabled = true
+end
+
+
+script.Parent.Activated:connect(onActivated)
+--script.Parent.Equipped:connect(onEquipped)
+end))
+LocalScript7.Name = "Local Gui"
+LocalScript7.Parent = Tool0
+LocalScript7.LinkedSource = "http://www.roblox.com/asset/?id=1014476"
+Script8.Name = "PUT THIS IN THE WEAPON"
+Script8.Parent = Tool0
+table.insert(cors,sandbox(Script8,function()
+local debounce = false
+
+function getPlayer(humanoid) 
+local players = game.Players:children() 
+for i = 1, #players do 
+if players[i].Character.Humanoid == humanoid then return players[i] end 
+end 
+return nil 
+end 
+
+function onTouch(part) 
+
+local human = part.Parent:findFirstChild("Humanoid") 
+if (human ~= nil) and debounce == false then
+
+debounce = true
+
+local player = getPlayer(human) 
+
+if (player == nil) then return end 
+
+script.Parent:clone().Parent = player.Backpack
+
+wait(2)
+debounce = false
+end
+end
+
+
+script.Parent.Parent.Touched:connect(onTouch) 
+
+end))
+PointLight9.Parent = Tool0
+PointLight9.Color = Color3.new(0.666667, 0, 1)
+PointLight9.Range = 60
+PointLight9.Brightness = 9.9999996802857e+37
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.Backpack
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
